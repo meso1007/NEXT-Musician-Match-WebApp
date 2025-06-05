@@ -1,0 +1,62 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #000000;
+}
+
+@font-face {
+  font-family: 'Tanker-Regular';
+  src: url('/fonts/Tanker-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #ffffff;
+    --foreground: #000000;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: "tiny5","Vivaldi","Tanker-Regular", "Inner","Noto Sans JP", sans-serif;
+}
+
+.normal{
+  font-family: "Tanker-Regular";
+}
+/* "PixelMplus12" */
+
+.unLogo {
+  font-family: "Vivaldi", "Noto Sans JP";
+}
+
+.unlogoJP {
+  font-family: "PixelMplus12";
+}
+
+.flash-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 1.5rem 0;
+  animation: flash 1s ease-in-out infinite;
+}
+
+@keyframes flash {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
